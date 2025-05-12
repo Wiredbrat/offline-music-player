@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Atul Verma">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="box.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-sm-5 col-12 text-white lists">
+                <div class="head">Music
+                    <div  class ="slide-button1"></div>
+                </div>
+                <ul class="list-items"></ul>
+            </div>
+            <div class="col-sm-7 col-12 wrapper">
+                <div  class ="slide-button"></div>
+                <div class="image"></div>
+                <div class="name">
+                    <h2 class="title">Song Name <br> artist</h2>
+                    <p class="artist"></p>
+                </div>
+                <div class="player">
+                    <div class="row">
+                        <div class="col running-duration">00:00</div>
+                        <div class="col text-end total-duration">00:00</div>
+                    </div>
+                    <input type="range" id="range" min="0" max="100" value="0" >
+                    <div class="row">
+                        <div class="col buttons"><img id="prev" src="image/back-button.png" alt="previous button"></div>
+                        <div class="col buttons"><img id="play-pause" src="image/play-button.png" alt="play-pause button"></div>
+                        <div class="col buttons"><img id="next" src="image/back-button.png" alt="next button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type ="module" src ="script.js" ></script>
+    <!-- <script type ="module" src ="api.js" ></script> -->
+    <script type ="module" src ="js/bootstrap.bundle.js" ></script>    
+</body>
+</html>

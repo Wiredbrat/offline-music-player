@@ -1,0 +1,259 @@
+.main{
+    /* width: 40%; */
+    background: #e1e1e1;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lists{
+    background: #424242;
+    padding: 0px;
+}
+
+.wrapper{
+    padding: 0px;
+    margin: 0px;
+}
+
+.slide-button{
+    position: fixed;
+    top: 4px;
+    right: 7px;
+    z-index: 5000;
+    background: url(image/arrow-204-64.ico), rgb(53, 53, 53);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 10px 11px;
+    border-radius: 50%;
+    /* transform: rotate(90deg); */
+    transition-duration: 500ms;
+    height: 40px;
+    width: 40px;
+    display: none;
+}
+
+.image{
+    margin: 30px auto;
+    height: 250px;
+    width: 250px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.404);
+}
+
+.image img{
+    height: 250px;
+}
+
+.name{
+    padding: 10px 30px;
+    margin-top: 10px;
+    background-color: rgb(220, 220, 220);
+}
+
+.name .title{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.player{
+    width: 100%;
+    padding: 29px 40px 30px 40px;
+    background: rgb(33, 33, 33);
+    color: white;
+
+}
+
+.player input{
+    width: 100%;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.player .buttons{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    background: transparent;
+    font-size: 18px;
+    filter: invert();
+}
+
+.player .buttons img:hover{
+    cursor: pointer;
+}
+
+.player .buttons img:active{
+    transform: scale(0.98);
+}
+
+#next{
+    transform: rotate(180deg);
+}
+
+#next:active{
+    transform: rotate(180deg) scale(0.98);
+}
+
+.head{
+    /* height: 10vh; */
+    padding: 15px 30px;
+    background: #7b7b7b;
+    font-weight: 600;
+    position: relative;
+    font-size: 20px;
+}
+
+/* .head .slide-button1{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3500;
+    background: rgb(53, 53, 53);
+    border-radius: 100%;
+    padding: 6px 10px;
+    transform: rotate(-90deg);
+    display: none;
+} */
+
+.list-items{
+    padding: 1px;
+    overflow-y: scroll;
+    height: 90vh;
+    margin: 0px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background: #535353;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #d6d6d6;
+}
+
+.list-items li{
+    padding: 10px 20px;
+    list-style: none;
+    background: #1a1818;
+    border-top: 0.1px solid #a5a5a5;
+    border-bottom: 0.1px solid #a5a5a5;
+    cursor: pointer;
+}
+
+.list-items li:hover{
+    background: #424242;
+}
+
+/* @media (max-width: 1024px) {
+    .image{
+        height: 350px;
+        width: 350px;
+    }
+
+    .image img{
+        height: 300px;
+    }
+    
+    .player{
+        padding: 50px 40px 60px 40px;
+    }
+} */
+
+@media (max-width: 768px) {
+    .player{
+        padding: 13px 40px 10px 40px;
+    }
+
+    .image{
+        height: 200px;
+        width: 200px;
+    }
+
+    .image img{
+        height: 200px;
+    }
+
+    .head{
+        /* height: 10vh; */
+        padding: 10px 30px;
+        }
+}
+
+@media (max-width: 576px) {
+    .lists{
+        z-index: 3000;
+        position: absolute;
+        top: -100%;
+        transition-duration: 500ms;
+    }
+    
+    .wrapper{
+        width: 100%;
+    }
+
+    .player{
+        padding: 11px 40px 12px 40px;
+    }
+
+    .image{
+        height: 200px;
+        width: 200px;
+    }
+
+    .image img{
+        height: 200px;
+    }
+
+    .slide-button{
+        display: block;
+    }
+
+    
+    .head{
+    /* height: 10vh; */
+    padding: 10px 30px;
+    }
+
+    /* .head .slide-button1{
+        display: block;
+    } */
+
+    .slideFunction{
+        transform: translateY(100%);
+        transition-duration: 500ms;
+    }
+
+    .rotateBtn{
+        transform: rotate(180deg);
+        transition-duration: 500ms;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .player{
+        padding: 10px 40px 13px 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .player{
+        padding: 50px 40px 55px 40px;
+    }
+
+    .image{
+        margin: 55px auto;
+        height: 400px;
+        width: 400px;
+    }
+
+    .image img{
+        height: 400px;
+    }
+
+    .name{
+        padding: 50px 30px;
+    }
+}
