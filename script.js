@@ -1,7 +1,5 @@
 import {listOfTracks} from "./api.js";  // to import the music list 
 
-// console.log(listOfTracks[1].name);
-
 // to create random colors to styling the background when song changes
 const randomBg = () => {
     let code = "";
@@ -12,7 +10,6 @@ const randomBg = () => {
             code += hex[random];
             document.querySelector(".wrapper").style.backgroundColor = `#${code}`; 
         }
-        // console.log(code);
     }
     code = "";
 }
@@ -28,7 +25,7 @@ const trackImage = document.querySelector(".image");
 let isPlaying = false;
 let index ;
 
-// music.autoplay = true;  
+
 
 function musicdata() {
     title.innerHTML = `<span style="font-size:18px;">${listOfTracks[index].name}</span> <br> <span style="font-size:12px;">${listOfTracks[index].artist}</span>`;
@@ -112,7 +109,6 @@ musicList.addEventListener("click", (event) => {
 })
 
 const slideBtn = document.querySelector(".slide-button");
-// const slideRightBtn = document.querySelector(".slide-button1");
 
 // button events
 document.addEventListener("click", (e) => {
@@ -244,21 +240,16 @@ const pauseTrackTime = () => {
         }
         timeElapsed = (min*60 + sec)*1000;
         clearInterval(playTime);
-        runningDuration.innerHTML = storeTime;
-        // console.log(timeElapsed);
-        
+        runningDuration.innerHTML = storeTime;    
     }
     else if(isPlaying) {
         if(timeElapsed >= 1000) {
             sec = timeElapsed/1000;
             if(sec >= 58){
                 min = Math.floor(sec/60);
-                // sec = timeElapsed/1000 - min*60;    //not in use
             }
         }
         
-        // console.log(min);
-        // console.log(sec);
         if(min < 10 && sec < 10){
             runningDuration.innerHTML = `0${min}:0${sec}`;
         }
@@ -286,7 +277,6 @@ const seekValue = () => {
         if(seekBtn.value <=100){
             seekBtn.value = store + val;
         }
-        // console.log((listOfTracks[index].duration/100)/1000)
     },listOfTracks[index].duration/100);
 
     setTimeout(() => {
@@ -308,19 +298,12 @@ const valueStore = () => {
         seekBtn.value = store;
         console.log(store);
     }else if(isPlaying) {
-        // val = store;
         seekBtn.value = store + val; 
         console.log(store);
         seekValue();
         console.log(seekBtn.value);
     }
 }
-// store = 0;
 
-// if(music.ended){
-//     console.log(music.ended)
-//     // playPause.src = "image/play-button.png";
-//     nextBtn();
-// }
 
 // END OF CODE.
