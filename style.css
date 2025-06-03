@@ -1,5 +1,4 @@
 .main{
-    /* width: 40%; */
     background: #e1e1e1;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,7 +24,6 @@
     background-repeat: no-repeat;
     background-position: 10px 11px;
     border-radius: 50%;
-    /* transform: rotate(90deg); */
     transition-duration: 500ms;
     height: 40px;
     width: 40px;
@@ -95,25 +93,12 @@
 }
 
 .head{
-    /* height: 10vh; */
     padding: 15px 30px;
     background: #7b7b7b;
     font-weight: 600;
     position: relative;
     font-size: 20px;
 }
-
-/* .head .slide-button1{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    z-index: 3500;
-    background: rgb(53, 53, 53);
-    border-radius: 100%;
-    padding: 6px 10px;
-    transform: rotate(-90deg);
-    display: none;
-} */
 
 .list-items{
     padding: 1px;
@@ -145,20 +130,6 @@
     background: #424242;
 }
 
-/* @media (max-width: 1024px) {
-    .image{
-        height: 350px;
-        width: 350px;
-    }
-
-    .image img{
-        height: 300px;
-    }
-    
-    .player{
-        padding: 50px 40px 60px 40px;
-    }
-} */
 
 @media (max-width: 768px) {
     .player{
@@ -175,7 +146,6 @@
     }
 
     .head{
-        /* height: 10vh; */
         padding: 10px 30px;
         }
 }
@@ -211,13 +181,8 @@
 
     
     .head{
-    /* height: 10vh; */
     padding: 10px 30px;
     }
-
-    /* .head .slide-button1{
-        display: block;
-    } */
 
     .slideFunction{
         transform: translateY(100%);
